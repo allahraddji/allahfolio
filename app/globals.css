@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 29 57;
+  --foreground: 189 216 233;
+  --muted: 110 162 179;
+  --glass: rgba(10, 65, 116, 0.46);
+  --glass-strong: rgba(73, 118, 159, 0.42);
+  --glass-border: rgba(110, 162, 179, 0.34);
+  --glass-shadow: rgba(0, 29, 57, 0.48);
+  --card: rgba(10, 65, 116, 0.78);
+  --soft-surface: rgba(73, 118, 159, 0.22);
+  --accent: 123 189 232;
+  --accent-2: 78 142 162;
+}
+
+html.dark {
+  --background: 0 29 57;
+  --foreground: 189 216 233;
+  --muted: 110 162 179;
+  --glass: rgba(10, 65, 116, 0.46);
+  --glass-strong: rgba(73, 118, 159, 0.42);
+  --glass-border: rgba(110, 162, 179, 0.34);
+  --glass-shadow: rgba(0, 29, 57, 0.48);
+  --card: rgba(10, 65, 116, 0.78);
+  --soft-surface: rgba(73, 118, 159, 0.22);
+  --accent: 123 189 232;
+  --accent-2: 78 142 162;
+}
+
+html:not(.dark) {
+  --background: 238 242 247;
+  --foreground: 15 23 42;
+  --muted: 71 85 105;
+  --glass: rgba(255,255,255,0.72);
+  --glass-strong: rgba(255,255,255,0.86);
+  --glass-border: rgba(148,163,184,0.22);
+  --glass-shadow: rgba(100, 116, 139, 0.14);
+  --card: rgba(255, 255, 255, 0.9);
+  --soft-surface: rgba(226, 232, 240, 0.8);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(125, 211, 252, 0.14), transparent 18%),
+    radial-gradient(circle at 85% 15%, rgba(147, 197, 253, 0.14), transparent 18%),
+    linear-gradient(135deg, rgb(var(--background)), rgb(var(--background) / 0.97));
+  color: rgb(var(--foreground));
+  font-family: 'Inter', sans-serif;
+}
+
+html.dark body {
+  background:
+    radial-gradient(circle at 18% 4%, rgba(123, 189, 232, 0.2), transparent 30%),
+    radial-gradient(circle at 88% 24%, rgba(78, 142, 162, 0.18), transparent 28%),
+    linear-gradient(180deg, #0A4174 0%, #49769F 22%, #4E8EA2 44%, #001D39 100%);
+}
+
+html:not(.dark) body {
+  color: rgb(var(--foreground));
+}
+
+html:not(.dark) .glass {
+  background: var(--glass);
+  border-color: var(--glass-border);
+  box-shadow: 0 20px 60px var(--glass-shadow);
+}
+
+html:not(.dark) .glass-strong {
+  background: var(--glass-strong);
+  border-color: var(--glass-border);
+}
+
+html:not(.dark) .text-white,
+html:not(.dark) .text-slate-100,
+html:not(.dark) .text-sky-100,
+html:not(.dark) .text-slate-200,
+html:not(.dark) .text-slate-300,
+html:not(.dark) .text-sky-200,
+html:not(.dark) .text-slate-200\/80,
+html:not(.dark) .text-slate-300\/70,
+html:not(.dark) .text-slate-300\/80 {
+  color: rgb(var(--foreground)) !important;
+}
+
+html:not(.dark) .text-slate-200\/80,
+html:not(.dark) .text-slate-300\/70,
+html:not(.dark) .text-slate-300\/80,
+html:not(.dark) .text-slate-200 {
+  color: rgb(var(--muted)) !important;
+}
+
+html:not(.dark) .bg-white\/10,
+html:not(.dark) .bg-white\/5,
+html:not(.dark) .bg-white\/20 {
+  background-color: rgba(148, 163, 184, 0.12) !important;
+}
+
+html:not(.dark) .border-white\/15,
+html:not(.dark) .border-white\/10,
+html:not(.dark) .border-white\/20,
+html:not(.dark) .border-white\/25 {
+  border-color: rgba(148, 163, 184, 0.3) !important;
+}
+
+html:not(.dark) .bg-sky-300\/15,
+html:not(.dark) .bg-sky-300\/25,
+html:not(.dark) .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, rgba(125, 211, 252, 0.2), rgba(255, 255, 255, 0.78));
+}
+
+html:not(.dark) .bg-white\/10 > * {
+  color: rgb(var(--foreground));
+}
+
+html.dark .text-white,
+html.dark .text-slate-100,
+html.dark .text-sky-100 {
+  color: rgb(var(--foreground)) !important;
+}
+
+html.dark .text-slate-200,
+html.dark .text-slate-200\/80,
+html.dark .text-slate-300,
+html.dark .text-slate-300\/70,
+html.dark .text-slate-300\/80,
+html.dark .text-sky-200 {
+  color: rgb(var(--muted)) !important;
+}
+
+html.dark .text-sky-300 {
+  color: rgb(var(--accent)) !important;
+}
+
+html.dark .text-white\/90 {
+  color: rgb(var(--foreground) / 0.9) !important;
+}
+
+html.dark .bg-white\/10,
+html.dark .bg-white\/5,
+html.dark .bg-white\/15,
+html.dark .bg-white\/20 {
+  background-color: rgba(73, 118, 159, 0.28) !important;
+}
+
+html.dark .border-white\/10,
+html.dark .border-white\/15,
+html.dark .border-white\/20,
+html.dark .border-white\/25 {
+  border-color: rgba(110, 162, 179, 0.4) !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(123, 189, 232, 0.4);
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px var(--glass-shadow);
+}
+
+.glass-strong {
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.glass-hover {
+  transition: transform 0.24s cubic-bezier(0.2, 0.75, 0.3, 1), border-color 0.24s ease, background 0.24s ease, box-shadow 0.24s ease;
+}
+
+.glass-hover:hover,
+.glass-hover:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgba(var(--accent), 0.72);
+  background: var(--glass-strong);
+  box-shadow: 0 18px 40px rgba(var(--accent-2), 0.28), 0 0 0 1px rgba(var(--accent), 0.16);
+}
+
+.glass-hover:focus-visible {
+  outline: 2px solid rgb(var(--accent));
+  outline-offset: 3px;
+}
+
+.glass-hover:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-hover {
+    transition: none;
+  }
+
+  .glass-hover:hover,
+  .glass-hover:focus-visible,
+  .glass-hover:active {
+    transform: none;
+  }
+}
+
+.orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 280px;
+  height: 280px;
+  background: rgba(123, 189, 232, 0.35);
+  top: 8%;
+  right: 8%;
+}
+
+.orb-2 {
+  width: 240px;
+  height: 240px;
+  background: rgba(78, 142, 162, 0.3);
+  bottom: 10%;
+  left: 8%;
+}
+
+.grid-pattern {
+  background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
