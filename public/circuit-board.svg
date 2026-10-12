@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <radialGradient id="board" cx="50%" cy="48%" r="72%">
+      <stop stop-color="#11789D" />
+      <stop offset="0.56" stop-color="#075278" />
+      <stop offset="1" stop-color="#031B35" />
+    </radialGradient>
+    <linearGradient id="trace" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#48E4FA" />
+      <stop offset="0.52" stop-color="#36BDEB" />
+      <stop offset="1" stop-color="#54EEFF" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <path fill="url(#board)" d="M0 0h1600v900H0z" />
+  <g id="circuits" stroke="url(#trace)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M0 42h110l55 55v76l44 44h78m-287-137h77l61 61v79l40 40h93M0 243h56l42-42v-65l38-38h57M43 0v76l35 35h54m-97 97v88l42 42h69l48 48" />
+    <path d="M0 377h72l42-42v-50l46-46h83m-243 164h42l42-42v-41l45-45h70m-157 0v-56l35-35h50m-67 231v81l49 49h42" />
+    <path d="M126 900v-98l60-60h95l50-50v-63m-331 174h90l56-56h82l50-50m-61 203v-36l45-45h70l52-52v-57m-284 146v-42l47-47h53" />
+    <path d="M331 0v44l38 38v68l39 39m-13-189v39l39 39v89l47 47m-4-214v75l35 35v47m-103 78h74l40 40v56" />
+    <path d="M574 0v49l27 27v78m52-154v37l31 31v54m43-85v43l35 35v-33m54-35v61l-30 30v32m97-132v70l-38 38v40m92-148v42l-33 33v72m98-147v83l-45 45v44" />
+    <path d="M1060 0v46l-34 34v58l-45 45v56m97-239v29l35 35v69l41 41m72-174v77l-39 39v56h-64m182-186v53l-42 42v100l-46 46h-86m191-108h-49l-36 36v68l-32 32" />
+    <path d="M1600 45h-98l-50 50v66l-52 52h-66m266-130h-55l-39 39v77l-49 49h-64m174 6h-73l-50 50v48l-42 42h-61m226 52h-101l-51 51v68l-57 57h-76" />
+    <path d="M1600 433h-72l-49-49v-65l-44-44h-71m236 199h-59l-42-42v-53l-37-37h-81m219 283h-89l-51-51v-77l-44-44h-66m250 208h-40l-47-47v-61l-49-49h-64" />
+    <path d="M1600 900v-82l-57-57v-67l-49-49h-73m-5 255v-47l-47-47v-68l-44-44h-66m-38 206v-75l-48-48v-73l-35-35m-56 231v-51l-40-40v-74l-44-44m-70 209v-96l-42-42v-59" />
+    <path d="M1128 900v-48l-48-48v-75l-48-48h-72m-68 219v-68l-37-37v-62l-51-51h-73m-51 218v-54l-50-50v-69l-41-41h-72m-62 214v-91l-41-41v-69l-43-43" />
+  </g>
+  <use href="#circuits" filter="url(#glow)" opacity="0.36" stroke-width="10" />
+  <use href="#circuits" opacity="0.9" />
+  <g fill="#66F0FF" filter="url(#glow)">
+    <circle cx="53" cy="110" r="5" />
+    <circle cx="53" cy="143" r="5" />
+    <circle cx="53" cy="176" r="5" />
+    <circle cx="603" cy="76" r="8" />
+    <circle cx="653" cy="76" r="8" />
+    <circle cx="704" cy="76" r="8" />
+    <circle cx="755" cy="76" r="8" />
+    <circle cx="806" cy="76" r="8" />
+    <circle cx="857" cy="76" r="8" />
+    <circle cx="112" cy="696" r="5" />
+    <circle cx="112" cy="731" r="5" />
+    <circle cx="1454" cy="264" r="6" />
+    <circle cx="1454" cy="300" r="6" />
+    <circle cx="1454" cy="336" r="6" />
+  </g>
+  <g fill="#83F4FF" opacity="0.9">
+    <circle cx="53" cy="110" r="3" />
+    <circle cx="53" cy="143" r="3" />
+    <circle cx="53" cy="176" r="3" />
+    <circle cx="603" cy="76" r="5" />
+    <circle cx="653" cy="76" r="5" />
+    <circle cx="704" cy="76" r="5" />
+    <circle cx="755" cy="76" r="5" />
+    <circle cx="806" cy="76" r="5" />
+    <circle cx="857" cy="76" r="5" />
+    <circle cx="112" cy="696" r="3" />
+    <circle cx="112" cy="731" r="3" />
+    <circle cx="1454" cy="264" r="4" />
+    <circle cx="1454" cy="300" r="4" />
+    <circle cx="1454" cy="336" r="4" />
+  </g>
+</svg>

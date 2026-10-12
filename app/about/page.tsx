@@ -1,7 +1,7 @@
 'use client';
 
 import SiteNav from '@/components/SiteNav';
-import ProfileCard from '@/components/ProfileCard';
+import HomeButton from '@/components/HomeButton';
 import FooterText from '@/components/FooterText';
 import { useI18n } from '@/i18n/I18nContext';
 
@@ -9,13 +9,10 @@ export default function AboutPage() {
   const { t } = useI18n();
 
   return (
-    <main className="relative min-h-screen overflow-hidden px-4 py-8 md:px-8 lg:px-10">
-      <div className="orb orb-1" />
-      <div className="orb orb-2" />
-
+    <main className="relative min-h-screen overflow-x-clip px-4 py-8 md:px-8 lg:px-10">
       <div className="relative mx-auto max-w-7xl">
         <div className="grid gap-7 lg:grid-cols-[360px_minmax(0,1fr)]">
-          <ProfileCard />
+          <HomeButton />
 
           <div className="space-y-6">
             <SiteNav />

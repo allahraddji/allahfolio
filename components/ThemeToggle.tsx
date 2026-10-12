@@ -4,18 +4,22 @@ import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(true);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem('portfolio-theme');
-    const dark = saved ? saved === 'dark' : true;
+    const dark = saved === null || saved === 'dark';
     setIsDark(dark);
     document.documentElement.classList.toggle('dark', dark);
+    setIsInitialized(true);
   }, []);
 
   useEffect(() => {
+    if (!isInitialized) return;
+
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
     document.documentElement.classList.toggle('dark', isDark);
-  }, [isDark]);
+  }, [isDark, isInitialized]);
 
   return (
     <button
