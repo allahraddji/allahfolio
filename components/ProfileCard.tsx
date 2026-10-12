@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useI18n } from '@/i18n/I18nContext';
 
@@ -17,9 +18,13 @@ export default function ProfileCard() {
       <div className="space-y-5">
         <div className="flex justify-center">
           <div className="flex h-32 w-32 items-center justify-center rounded-full border border-white/20 bg-gradient-to-br from-white/20 to-sky-300/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.3)] dark:from-[#49769F]/60 dark:to-[#0A4174]/30">
-            <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-sky-300/40 to-white/10 text-4xl font-black text-white dark:from-[#7BBDE8]/50 dark:to-[#0A4174]/40">
-              A
-            </div>
+            <Image
+              src="/profile-photo.png"
+              alt={t('name')}
+              width={96}
+              height={96}
+              className="h-24 w-24 rounded-full object-cover"
+            />
           </div>
         </div>
 
