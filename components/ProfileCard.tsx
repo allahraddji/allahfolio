@@ -8,7 +8,7 @@ export default function ProfileCard() {
   const { t } = useI18n();
 
   return (
-    <aside className="glass glass-hover sticky top-6 h-fit rounded-[28px] p-5 lg:p-6">
+    <aside className="glass glass-hover h-fit min-w-0 rounded-[28px] p-5 lg:sticky lg:top-6 lg:p-6">
       <div className="mb-5 flex items-center gap-3">
         <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/15 bg-white/10 text-lg font-black tracking-[0.15em] text-white">
           AD

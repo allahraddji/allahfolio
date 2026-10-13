@@ -13,10 +13,10 @@ export default function HomePage() {
   return (
     <main className="relative min-h-screen overflow-x-clip px-4 py-8 md:px-8 lg:px-10">
       <div className="relative mx-auto max-w-7xl">
-        <div className="grid gap-7 lg:grid-cols-[360px_minmax(0,1fr)]">
+        <div className="grid grid-cols-1 gap-7 lg:grid-cols-[360px_minmax(0,1fr)]">
           <ProfileCard />
 
-          <div className="space-y-6">
+          <div className="min-w-0 space-y-6">
             <SiteNav />
 
             <section className="glass glass-hover grid gap-6 rounded-[30px] p-5 md:p-7 lg:grid-cols-[1.2fr_0.8fr]">

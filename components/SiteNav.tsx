@@ -22,7 +22,7 @@ export default function SiteNav() {
   return (
     <header className="glass sticky top-6 z-20 rounded-[24px] px-4 py-3 md:px-5">
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <nav aria-label="Main navigation" className="order-3 flex w-full min-w-0 items-center gap-5 overflow-x-auto pb-1 md:order-none md:w-auto md:gap-6 md:pb-0">
+        <nav aria-label="Main navigation" className="order-3 grid w-full min-w-0 grid-cols-3 gap-x-2 gap-y-3 pb-1 md:order-none md:flex md:w-auto md:items-center md:gap-6 md:pb-0">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
 
@@ -31,7 +31,7 @@ export default function SiteNav() {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? 'page' : undefined}
-                className={`shrink-0 whitespace-nowrap text-sm transition ${
+                className={`min-w-0 text-center text-xs transition md:shrink-0 md:whitespace-nowrap md:text-sm ${
                   isActive ? 'font-semibold text-sky-600 dark:text-sky-300' : 'text-slate-600 hover:text-slate-900 dark:text-slate-200/80 dark:hover:text-white'
                 }`}
               >
